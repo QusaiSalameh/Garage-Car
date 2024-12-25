@@ -8,10 +8,9 @@ const cars = [
     { id: 6, name: "Mercedes C", price:43000, image : "images/mar.jpg", details:"Engine: 1.80L, Mileage: 28,000 miles,model: 2022"},
   ];
   
-  // Function to render car listings
   function renderCars(carsToDisplay) {
     const carList = document.getElementById("car-list");
-    carList.innerHTML = ""; // Clear current listings
+    carList.innerHTML = "";
   
     carsToDisplay.forEach(car => {
       const carElement = document.createElement("div");
@@ -28,7 +27,6 @@ const cars = [
     });
   }
   
-  // Function to show car details in a simple alert
  // نافذة منبثقة للتفاصيل
 function showDetails(carId) {
     const car = cars.find(car => car.id === carId);
@@ -39,10 +37,10 @@ function showDetails(carId) {
     modalTitle.textContent = car.name;
     modalDetails.textContent = `Price: $${car.price}\nDetails: ${car.details}`;
   
-    modal.style.display = "flex"; // عرض النافذة
+    modal.style.display = "flex"; 
   }
   
-  // إغلاق النافذة عند الضغط على زر الإغلاق
+  
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".close-btn").addEventListener("click", () => {
       document.getElementById("modal").style.display = "none";
@@ -64,13 +62,13 @@ function showDetails(carId) {
     const loginError = document.getElementById("login-error");
   });
  
-  // Event listeners for buttons
+  
   document.getElementById("showAllBtn").addEventListener("click", () => {
     renderCars(cars);
   });
   
   document.getElementById("filterBtn").addEventListener("click", () => {
-    // Filter cars by price (for example, show only cars under $30,000)
+    // Filter cars by price 
     const filteredCars = cars.filter(car => car.price <= 30000);
     renderCars(filteredCars);
   });

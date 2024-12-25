@@ -4,34 +4,30 @@
     padding: 0;
     box-sizing: border-box;
   }
-  /* النمط الأساسي للنافذة المنبثقة */
- /* نمط الخلفية للنوافذ */
+
 #modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(12, 12, 12, 0.8); /* خلفية شفافة */
-  display: none; /* تبدأ مخفية */
+  background-color: rgba(12, 12, 12, 0.8);
+  display: none; 
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* فوق المحتوى الآخر */
+  z-index: 1000; 
 }
-/* محتوى النافذة */
 .modal-content {
   background: #ffffff;
   padding: 30px;
   border-radius: 10px;
   max-width: 400px;
   width: 90%;
-  box-shadow: 0 4px 20px rgba(218, 17, 17, 0.3); /* ظل جميل */
+  box-shadow: 0 4px 20px rgba(218, 17, 17, 0.3); 
   text-align: center;
   position: relative;
-  animation: fadeIn 0.3s ease-in-out; /* تأثير دخول */
+  animation: fadeIn 0.3s ease-in-out; 
 }
-
-/* زر الإغلاق */
 .close-btn {
   position: absolute;
   top: 15px;
@@ -53,25 +49,20 @@
 
 .close-btn:hover {
   background-color: #ff3333;
-  transform: scale(1.1); /* تكبير عند المرور */
+  transform: scale(1.1); 
 }
-
-/* العنوان */
 #modal-title {
   font-size: 1.5rem;
   margin-bottom: 15px;
   color: #000000;
   font-weight: bold;
 }
-
-/* النص */
 #modal-details {
   font-size: 1rem;
   color: #555555;
   line-height: 1.5;
 }
 
-/* تأثير الدخول */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -83,9 +74,6 @@
   }
 }
 
-  
-
-/* تأثيرات الدخول والخروج */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -107,8 +95,6 @@
     transform: scale(0.8);
   }
 }
-
-/* تأثيرات نافذة العرض */
 .modal-content {
   background: #ffffff;
   padding: 30px;
@@ -118,10 +104,8 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   text-align: center;
   position: relative;
-  animation: fadeIn 0.3s ease-in-out; /* تأثير الدخول افتراضي */
+  animation: fadeIn 0.3s ease-in-out; 
 }
-
-/* إضافة صف عند الإغلاق */
 
 .modal-content.closing {
   animation: fadeOut 0.3s ease-in-out;
